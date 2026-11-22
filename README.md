@@ -82,3 +82,15 @@ quiet zone.
     Sources/BatchView.swift    batch export sheet
     Sources/App.swift          app entry point
     Tools/MakeIcon.swift       app icon, drawn with CoreGraphics
+    Tools/GenerateWebsiteAssets.swift screenshot and website asset renderer
+    index.html                 product website and live web playground
+    styles.css                 macOS-inspired styling for product website
+    app.js                     client-side QR generator and interactive showcase
+
+## Website
+
+The product website and interactive web studio are located at [index.html](file:///Users/aldrinnellas/CS/QR/index.html) (and in `docs/` for GitHub Pages). It includes an in-browser QR studio that mirrors the macOS app's horizontal run-merging SVG engine, live ISO 18004 inspector, seam-free vector visualizer, and batch export simulator.
+
+Live website: [https://quick-qr-nu-rouge.vercel.app](https://quick-qr-nu-rouge.vercel.app).
+
+Deploy to Vercel with `vercel --prod`. The configuration publishes `docs/` as a static site, and `.vercelignore` excludes native source, local credentials, and duplicate assets from uploads.

@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quick QR | QR code generator for Mac and web</title>
+  <meta name="description" content="Create QR codes for links, Wi-Fi, and contacts in your browser. Export SVG or PNG, or download the Mac app for PDF and batch export.">
+  <meta name="author" content="Ajtn05">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://quick-qr-nu-rouge.vercel.app/">
+  <meta property="og:title" content="Quick QR | QR code generator for Mac and web">
+  <meta property="og:description" content="Create QR codes for links, Wi-Fi, and contacts in your browser. Export SVG or PNG, or download the Mac app for PDF and batch export.">
+  <meta property="og:image" content="https://quick-qr-nu-rouge.vercel.app/assets/app-screenshot-dark.png?v=2">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Quick QR | QR code generator for Mac and web">
+  <meta name="twitter:description" content="Create QR codes for links, Wi-Fi, and contacts in your browser. Export SVG or PNG, or download the Mac app for PDF and batch export.">
+  <meta name="twitter:image" content="https://quick-qr-nu-rouge.vercel.app/assets/app-screenshot-dark.png?v=2">
+
+  <link rel="canonical" href="https://quick-qr-nu-rouge.vercel.app/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body class="theme-dark">
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="#" class="brand">
+        <img src="assets/app-icon.png" alt="" class="brand-icon" width="32" height="32">
+        <span class="brand-text">Quick QR</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#studio">Web studio</a>
+        <a href="#features">Mac app</a>
+        <a href="#seam-free">Vector export</a>
+        <a href="#batch">Batch Export</a>
+        <a href="#compare">Mac vs. web</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-icon" aria-label="Switch to light mode" title="Switch to light mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="https://github.com/Ajtn05/Quick-QR" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View Source on GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+
+        <a href="assets/Quick-QR-macOS.zip" download class="btn btn-primary btn-sm">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span>Download Mac app</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="container hero-content">
+        <h1 class="hero-title">Make a QR code</h1>
+        <p class="hero-subtitle">
+          Turn a link, Wi-Fi network, or contact card into a QR code. Use your browser or download Quick QR for Mac to export PDFs and make codes in batches.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="assets/Quick-QR-macOS.zip" download class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download for macOS</span>
+          </a>
+
+          <a href="#studio" class="btn btn-secondary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            <span>Open web studio</span>
+          </a>
+        </div>
+
+        <p class="download-requirements">Requires macOS 13 or later and Apple Silicon.</p>
+
+        <!-- Interactive macOS Showcase Window -->
+        <div class="showcase-wrapper">
+          <div class="showcase-tabs" role="group" aria-label="App screenshots">
+            <button class="showcase-tab active" data-target="link" aria-pressed="true">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              <span>Link (Dark)</span>
+            </button>
+            <button class="showcase-tab" data-target="light" aria-pressed="false">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2"/></svg>
+              <span>Link (Light)</span>
+            </button>
+            <button class="showcase-tab" data-target="wifi" aria-pressed="false">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+              <span>Wi-Fi Network</span>
+            </button>
+            <button class="showcase-tab" data-target="contact" aria-pressed="false">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Contact Card</span>
+            </button>
+            <button class="showcase-tab" data-target="batch" aria-pressed="false">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              <span>Batch Export</span>
+            </button>
+          </div>
+
+          <div class="mac-window">
+            <div class="mac-window-content">
+              <!-- Screenshots View -->
+              <div class="screenshot-container active" id="view-link">
+                <img src="assets/app-screenshot-dark.png?v=2" alt="Quick QR Dark Mode macOS screenshot" width="748" height="760" loading="eager">
+              </div>
+              <div class="screenshot-container" id="view-light">
+                <img src="assets/app-screenshot-light.png?v=2" alt="Quick QR Light Mode macOS screenshot" width="748" height="760" loading="lazy">
+              </div>
+              <div class="screenshot-container" id="view-wifi">
+                <img src="assets/app-screenshot-wifi.png?v=2" alt="Quick QR Wi-Fi screen macOS screenshot" width="748" height="760" loading="lazy">
+              </div>
+              <div class="screenshot-container" id="view-contact">
+                <img src="assets/app-screenshot-contact.png?v=2" alt="Quick QR Contact Card vCard screen macOS screenshot" width="748" height="760" loading="lazy">
+              </div>
+              <div class="screenshot-container" id="view-batch">
+                <img src="assets/app-screenshot-batch.png?v=2" alt="Quick QR Batch Export sheet screenshot" width="500" height="380" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live In-Browser Studio Section -->
+    <section id="studio" class="section section-studio">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Web studio</h2>
+          <p class="section-desc">
+            Choose a code type, enter your details, and save the result as SVG or PNG. Your entries stay in your browser.
+          </p>
+        </div>
+
+        <div class="studio-app-window">
+          <div class="studio-sidebar">
+            <div class="sidebar-header">Payload Type</div>
+            <ul class="payload-type-list" id="payloadTypeList">
+              <li><button type="button" class="type-item active" data-type="link" aria-pressed="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                <span>Link</span>
+              </button></li>
+              <li><button type="button" class="type-item" data-type="text" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="17" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="17" y1="18" x2="3" y2="18"/></svg>
+                <span>Plain Text</span>
+              </button></li>
+              <li><button type="button" class="type-item" data-type="wifi" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+                <span>Wi-Fi Network</span>
+              </button></li>
+              <li><button type="button" class="type-item" data-type="contact" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span>Contact Card</span>
+              </button></li>
+              <li><button type="button" class="type-item" data-type="email" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Email</span>
+              </button></li>
+              <li><button type="button" class="type-item" data-type="sms" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span>SMS</span>
+              </button></li>
+              <li><button type="button" class="type-item" data-type="phone" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Phone</span>
+              </button></li>
+              <li><button type="button" class="type-item" data-type="location" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Location</span>
+              </button></li>
+              <li><button type="button" class="type-item" data-type="event" aria-pressed="false">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Calendar Event</span>
+              </button></li>
+            </ul>
+          </div>
+
+          <div class="studio-form-pane">
+            <div class="form-scrollable">
+              <!-- Dynamic Form per Payload -->
+              <div id="formFieldsContainer">
+                <!-- Injected via JavaScript -->
+              </div>
+
+              <!-- Technical Inspector Card -->
+              <div class="inspector-card">
+                <div class="inspector-header">Details</div>
+                <div class="inspector-rows" id="inspectorDetails">
+                  <!-- Populated via JS -->
+                </div>
+              </div>
+
+              <!-- Encoded Payload Inspection -->
+              <div class="encoded-payload-card">
+                <div class="encoded-payload-header">Encoded payload</div>
+                <pre class="encoded-payload-text" id="encodedPayloadText">https://example.com/menu</pre>
+              </div>
+            </div>
+          </div>
+
+          <div class="studio-preview-pane">
+            <div class="preview-stage">
+              <div class="qr-preview-frame" id="qrPreviewFrame">
+                <div id="qrSvgContainer" class="qr-svg-holder">
+                  <!-- Live SVG inserted here -->
+                </div>
+              </div>
+              <span class="preview-caption">The white border is the quiet zone.</span>
+            </div>
+
+            <!-- Export & Symbol Tuning Form -->
+            <div class="export-controls">
+              <div class="control-group">
+                <span class="control-label" id="formatLabel">Format</span>
+                <div class="segmented-control" id="formatSelector" role="group" aria-labelledby="formatLabel">
+                  <button class="seg-btn active" data-format="svg" aria-pressed="true">SVG</button>
+                  <button class="seg-btn" data-format="png" aria-pressed="false">PNG</button>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label" for="correctionSelect">Error correction</label>
+                <select id="correctionSelect" class="form-select">
+                  <option value="L">Level L — 7% recovery</option>
+                  <option value="M" selected>Level M — 15% recovery</option>
+                  <option value="Q">Level Q — 25% recovery</option>
+                  <option value="H">Level H — 30% recovery</option>
+                </select>
+              </div>
+
+              <div class="control-group" id="pngSizeGroup" style="display: none;">
+                <label class="control-label" for="pngSizeSelect">PNG size</label>
+                <select id="pngSizeSelect" class="form-select">
+                  <option value="512">512 px</option>
+                  <option value="1024" selected>1024 px</option>
+                  <option value="2048">2048 px</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <div class="quiet-zone-header">
+                  <label class="control-label" for="quietZoneSlider">Quiet zone</label>
+                  <span class="quiet-value-pill" id="quietZoneDisplay">4 mod</span>
+                </div>
+                <input type="range" id="quietZoneSlider" min="0" max="16" value="4" class="form-slider">
+                <div class="quiet-zone-hint" id="quietZoneHint">
+                  ISO 18004 specifies 4 modules as the minimum.
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="preview-action-bar">
+              <span class="action-status" id="actionStatus" role="status"></span>
+              <div class="action-buttons">
+                <button class="btn btn-secondary btn-sm" id="btnCopy">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span id="btnCopyText">Copy</span>
+                </button>
+                <button class="btn btn-primary btn-sm" id="btnDownload">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  <span id="btnDownloadText">Download</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Seam-Free Vector Problem Section -->
+    <section id="seam-free" class="section section-seam">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Vector QR codes for print</h2>
+          <p class="section-desc">
+            Quick QR joins neighboring squares in each row into longer shapes. That reduces the number of edges where thin lines can appear when a vector file is scaled.
+          </p>
+        </div>
+
+        <div class="seam-comparison-card">
+          <div class="comparison-header">
+            <div class="comparison-mode-switch">
+              <button class="switch-btn active" id="btnShowMerged" aria-pressed="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16"/><path d="M12 4v16"/></svg>
+                <span>Joined rows</span>
+              </button>
+              <button class="switch-btn" id="btnShowNaive" aria-pressed="false">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                <span>Individual squares</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="comparison-stage">
+            <div class="visualizer-box" id="visualizerBox">
+              <svg viewBox="0 0 140 140" width="140" height="140" role="img" aria-label="Magnified corner of a QR code">
+                <g id="demoGraphicMerged"></g>
+              </svg>
+            </div>
+            <div class="comparison-explanation">
+              <h3>A closer look at the corners</h3>
+              <p id="comparisonStatus" aria-live="polite">Joined rows have fewer edges between neighboring dark squares.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Grid Section -->
+    <section id="features" class="section section-features">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Quick QR for Mac</h2>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Vector and raster export</h3>
+            <p>Save SVG or PDF for print and PNG for screens. PNG exports align each QR square to whole pixels.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Adjustable quiet zone</h3>
+            <p>Set the blank border from 0 to 16 modules. Quick QR flags settings below the four-module minimum.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Drag to export</h3>
+            <p>Drag the preview into Finder or another app to export a file in the selected format.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Batch export</h3>
+            <p>Paste a list of links or text and save one QR code per line. Quick QR gives each file a distinct name.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Works offline</h3>
+            <p>Generate codes for private links, contact cards, and Wi-Fi networks on your Mac.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Code details</h3>
+            <p>See exactly what the code contains, along with its size and error correction level.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Batch Export Simulation Section -->
+    <section id="batch" class="section section-batch">
+      <div class="container">
+        <div class="batch-feature-wrapper">
+          <div class="batch-text-column">
+            <h2 class="section-title">Export a list of QR codes</h2>
+            <p class="section-desc">
+              Press <kbd>⇧⌘B</kbd> in the Mac app and paste one link or text entry per line. Every code uses your current format, quiet zone, and error correction settings.
+            </p>
+
+          </div>
+
+          <div class="batch-demo-column">
+            <div class="batch-card">
+              <div class="batch-card-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                <div>
+                  <label for="batchInputText" class="batch-header-title">Preview batch filenames</label>
+                  <div class="batch-header-sub">Enter one link per line to see its SVG filename.</div>
+                </div>
+              </div>
+
+              <div class="batch-input-area">
+                <textarea id="batchInputText" class="batch-textarea" spellcheck="false" rows="5" placeholder="https://example.com/booth-1&#10;https://example.com/booth-2&#10;https://example.com/menu">https://example.com/menu
+https://example.com/table-1
+https://example.com/table-2
+https://example.com/wifi-guest
+https://example.com/feedback</textarea>
+              </div>
+
+              <div class="batch-card-footer">
+                <div class="batch-stats">
+                  <span id="batchCountBadge" class="badge badge-accent">5 entries</span>
+                </div>
+                <button class="btn btn-primary btn-sm" id="btnRunBatchSimulation">
+                  <span>Preview filenames</span>
+                </button>
+              </div>
+
+              <!-- Simulation Output Area -->
+              <div class="batch-sim-results" id="batchSimResults" style="display: none;">
+                <div class="sim-results-title">Example filenames</div>
+                <div class="sim-file-list" id="simFileList" aria-live="polite"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compare" class="section section-compare">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Mac app and web studio</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="compare-table">
+            <thead>
+              <tr><th scope="col">Feature</th><th scope="col">Mac app</th><th scope="col">Web studio</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">File formats</th><td>PNG, SVG, PDF</td><td>PNG, SVG</td></tr>
+              <tr><th scope="row">Batch export</th><td>One file per line</td><td>Filename preview</td></tr>
+              <tr><th scope="row">Requirements</th><td>Apple Silicon, macOS 13 or later</td><td>Modern browser</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Keyboard Shortcuts Guide Section -->
+    <section class="section section-shortcuts">
+      <div class="container">
+        <div class="shortcuts-card">
+          <div class="shortcuts-header">
+            <h2>Mac keyboard shortcuts</h2>
+          </div>
+          <div class="shortcuts-grid">
+            <div class="shortcut-item">
+              <div class="key-combo"><kbd>⌘</kbd><kbd>S</kbd></div>
+              <div class="shortcut-desc">
+                <strong>Save to File</strong>
+                <span>Save to the last folder you used</span>
+              </div>
+            </div>
+
+            <div class="shortcut-item">
+              <div class="key-combo"><kbd>⇧</kbd><kbd>⌘</kbd><kbd>C</kbd></div>
+              <div class="shortcut-desc">
+                <strong>Copy to Clipboard</strong>
+                <span>Copy the selected format</span>
+              </div>
+            </div>
+
+            <div class="shortcut-item">
+              <div class="key-combo"><kbd>⇧</kbd><kbd>⌘</kbd><kbd>B</kbd></div>
+              <div class="shortcut-desc">
+                <strong>Batch export</strong>
+                <span>Open the batch export window</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="section section-faq">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">FAQ</h2>
+        </div>
+
+        <div class="faq-accordion">
+          <details class="faq-item" open>
+            <summary class="faq-question">
+              <span>Do these QR codes expire?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>The code stores your original content directly. If it contains a link, keep the destination online for the link to keep working.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>Which format should I use for print?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>Use SVG or PDF for print. Both are vector formats that stay sharp as you resize them.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What is a quiet zone?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>The quiet zone is the blank border around the code. Leave at least four squares of space on each side so scanners can pick out the code.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>What are the system requirements?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>The download requires a Mac with Apple Silicon and macOS 13 (Ventura) or later.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">
+              <span>How do I build the app from source?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <div class="faq-answer">
+              <p>Install the Xcode Command Line Tools, then run this command. The app appears inside the cloned repository at <code>build/QR Generator.app</code>.</p>
+              <div class="cli-command-card">
+                <span class="cli-prompt">$</span>
+                <code>git clone https://github.com/Ajtn05/Quick-QR.git &amp;&amp; ./Quick-QR/build.sh</code>
+                <button class="cli-copy-btn" id="cliCopyBtn" aria-label="Copy build command" title="Copy build command">
+                  <svg class="icon-copy" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  <span class="copy-text">Copy</span>
+                </button>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Call to Action Section -->
+    <section class="section section-cta">
+      <div class="container cta-container">
+        <div class="cta-card">
+          <div class="cta-badge">
+            <img src="assets/app-icon.png" alt="" width="64" height="64" class="cta-app-icon">
+          </div>
+          <h2 class="cta-title">Download Quick QR for Mac</h2>
+          <div class="cta-buttons">
+            <a href="assets/Quick-QR-macOS.zip" download class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Download for macOS</span>
+            </a>
+            <a href="https://github.com/Ajtn05/Quick-QR" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>View Source on GitHub</span>
+            </a>
+          </div>
+
+          <div class="cta-footnote">
+            <span>Version 1.0 for Apple Silicon. Requires macOS 13 or later.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand">
+          <img src="assets/app-icon.png" alt="" class="brand-icon" width="24" height="24">
+          <span class="brand-text">Quick QR</span>
+        </div>
+        <p class="footer-copy">
+          By <a href="https://github.com/Ajtn05" target="_blank" rel="noopener noreferrer">Ajtn05</a>.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#studio">Web studio</a>
+        <a href="#features">Mac app</a>
+        <a href="#seam-free">Vector export</a>
+        <a href="#compare">Mac vs. web</a>
+        <a href="https://github.com/Ajtn05/Quick-QR" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/qrcode.min.js"></script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>
