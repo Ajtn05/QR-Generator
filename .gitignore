@@ -1,2 +1,6 @@
 .DS_Store
-/Tools
+
+
+.vercel/
+.vercel
+.env*
