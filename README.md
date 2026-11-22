@@ -1,4 +1,5 @@
-# Quick QR
+# QR Generator
+
 
 A QR code generator for macOS and the browser. Pick a payload type, fill in the
 fields, and export a code as SVG, PDF, or PNG.
